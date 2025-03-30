@@ -1,0 +1,50 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/docker-existing-dockerfile
+{
+	"name": "Existing Dockerfile",
+	"build": {
+		// Sets the run context to one level up instead of the .devcontainer folder.
+		"context": "..",
+		// Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
+		"dockerfile": "../Dockerfile",
+		"target": "development"
+	},
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [5173],
+	// Configure tool-specific properties.
+	// "customizations": {},
+	// Uncomment to connect as an existing user other than the container default. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "devcontainer"
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-azuretools.vscode-docker",
+				"dbaeumer.vscode-eslint",
+				"jbockle.jbockle-format-files",
+				"vincaslt.highlight-matching-tag",
+				"oderwat.indent-rainbow",
+				"bradlc.vscode-tailwindcss",
+				"esbenp.prettier-vscode",
+				"redhat.vscode-yaml",
+				"mhutchie.git-graph",
+				"eamodio.gitlens",
+				"vitest.explorer"
+			]
+		}
+	},
+	"mounts": [
+		{
+			"source": "ssh_keys",
+			"target": "/mnt/ssh_keys",
+			"type": "volume"
+		},
+		{
+			"source": "ca_certificates",
+			"target": "/mnt/ca_certificates",
+			"type": "volume"
+		}
+	],
+	"postStartCommand": "pnpm run devcontainer:poststart"
+}

@@ -1,0 +1,6 @@
+Id,Transaction ID,Date (UTC),Amount (BTC),Balance (BTC),Fee (BTC),Inputs,Outputs,Description
+3,5b8d8abf4a8f21b8c95d9cc76807c56a29f3e5ad75fe4439c6e3b2c2e7b2c139,2018-05-09 17:09:19,-0.00010892,0.00189108,0.00000892,bc1qhd38nzzmf6dhpwyvydgtq89lhm60szvvxqv6n5: 0.00200000 BTC,"bc1qx06gml9qddvxj8mv7qhjpdu2p6rk35fhlm40v6: 0.00010000 BTC,
+bc1q3zkg2plvjqf5l3jmhqhv9xje5wphkxmrnt38fh: 0.00189108 BTC",
+2,0f6822fdb6e8d062c38c3f3f8c264f318f8d9a3b597ff72c5e5a0f46e5c320d7,2018-05-08 13:23:40,+0.002,0.002,0.00423600,Multiple Inputs,bc1qhd38nzzmf6dhpwyvydgtq89lhm60szvvxqv6n5: 0.00200000 BTC,
+1,cfd9d9f30ac1ab6b3465a6b6f15f0f3791e76b4f0c69490764baf7f717b7462b,2018-02-05 18:21:36,-0.01115264,0.,0.00087831,bc1qar0srrr7xfkvy5l643lydnw9re59gtzzwf02vl: 0.01115264 BTC,bc1ql8au0xghg9pxv2u3s2m7y5z5lcdfscyx7f6zsd: 0.01027433 BTC,
+0,d79c27cbfef08edc68c1b47cf2212e509ada84b8edb84f15c7a4dcb0ee8e69c9,2017-11-25 13:16:28,+0.01115264,0.01115264,0.03149282,Multiple Inputs,bc1qar0srrr7xfkvy5l643lydnw9re59gtzzwf02vl: 0.01115264 BTC,

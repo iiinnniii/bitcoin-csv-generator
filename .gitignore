@@ -1,0 +1,18 @@
+# Node modules
+node_modules
+
+# Logs
+pnpm-debug.log*
+
+# pnpm-specific files
+.pnpm-store/
+
+# Ignore everything in the output directory
+output/*
+
+# But don't ignore the output directory itself
+!output/
+
+# My data and test data
+mydata
+transactions-old.csv
