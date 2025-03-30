@@ -72,7 +72,7 @@ pnpm install
 pnpm start
 ```
 
-In both cases, the generated `.csv` file will be located at output/transactions.csv.
+In both cases, the generated `.csv` file will be located at `output/transactions.csv`.
 
 If this program saved you a ton of time, please consider donating. Your contribution would mean a lot to me, I'd appriciate it so much.
 
