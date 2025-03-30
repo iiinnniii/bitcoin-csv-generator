@@ -91,6 +91,24 @@ async function getTransactionData(txid) {
 	}
 }
 
+// Function to get block data from Blockchain.info API
+// This function is requred, because the rawtx API only returns the time when the transaction was broadcasted, but not when it was actually mined. The mined time we can obtain from this block-height API.
+async function getBlockData(blockHeight) {
+	try {
+		const response = await fetch(
+			`https://blockchain.info/block-height/${blockHeight}?format=json`,
+		);
+		if (!response.ok) {
+			throw new Error(
+				`Error fetching data for transaction ${blockHeight}: ${response.statusText}`,
+			);
+		}
+		return await response.json();
+	} catch (error) {
+		console.error(error);
+	}
+}
+
 // Function to process each transaction
 async function processTransactions() {
 	let rowId = 0;
@@ -99,6 +117,8 @@ async function processTransactions() {
 
 	for (const txid of transactionHashes) {
 		const txData = await getTransactionData(txid);
+		await sleep(1000); // Sleep for 1 second between requests
+		const blockData = await getBlockData(txData.block_height);
 		await sleep(1000); // Sleep for 1 second between requests
 
 		if (!txData) {
@@ -169,7 +189,7 @@ async function processTransactions() {
 		const transactionRow = {
 			id: rowId++,
 			txid: txid,
-			date: convertTimestampToUTC(txData.time),
+			date: convertTimestampToUTC(blockData.blocks[0].time), // txData.time is actually the time when the transaction was broadcasted. blockData.blocks[0].time is the time when it was mined.
 			amount: amountStr,
 			balance: balance === 0 ? '0.' : satoshisToBTC(balance),
 			fee: satoshisToBTC(fee, false),
