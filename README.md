@@ -56,6 +56,10 @@ Only relevant data will be displayed in the input and output columns, similar to
 - If none of your addresses are present in a transaction's inputs, the input field will display "Multiple Inputs" or simply "Input." Otherwise, it will show only the inputs associated with your addresses.
 - If none of your addresses are present in a transaction's inputs, the output field will display only the outputs related to your addresses. However, if your addresses are included in the inputs, all outputs will be shown.
 
+To avoid overwhelming the API with requests, a very conservative sleep interval of 1 second between requests has been implemented. This helps to ensure smooth operation without hitting rate limits.
+
+If you have many transactions to process, you can decrease the sleep interval to speed up the process. However, keep in mind that reducing the sleep time too much could result in exceeding the rate limit of the API, potentially causing errors.
+
 There are generally two ways to execute this program.
 
 You can use Docker (the recommended approach) by installing Docker Desktop and running the following commands in the root directory of this project:
