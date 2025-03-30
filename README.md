@@ -51,7 +51,7 @@ afbe2585d2ce72664dfe3c4e55df82d2a9e87f7c0307b53da8c44cda7a546103
 1a005995d29d7be81fd18dbc9fb9f9599b8c509033b72d573b0c036e52d77cfd
 ```
 
-If none of your addresses are included in the inputs of a transaction, the input field for that transaction will be set to "Multiple Inputs" or "Input".
+If none of your addresses are included in the inputs of a transaction, the input field for that transaction will be set to "Multiple Inputs" or "Input". Otherwise, the inputs associated with your addresses will be displayed.
 
 The output column will only display outputs associated with your addresses.
 
