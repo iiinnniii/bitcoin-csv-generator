@@ -51,9 +51,10 @@ afbe2585d2ce72664dfe3c4e55df82d2a9e87f7c0307b53da8c44cda7a546103
 1a005995d29d7be81fd18dbc9fb9f9599b8c509033b72d573b0c036e52d77cfd
 ```
 
-If none of your addresses are included in the inputs of a transaction, the input field for that transaction will be set to "Multiple Inputs" or "Input". Otherwise, the inputs associated with your addresses will be displayed.
+Only relevant data will be displayed in the input and output columns, similar to how Electrum does it by default. Below is a detailed explanation of the mechanics:
 
-If none of your addresses are included in the inputs of a transaction, the output field for that transaction will only display outputs associated with your addresses. Otherwise, all outputs will be displayed.
+- If none of your addresses are present in a transaction's inputs, the input field will display "Multiple Inputs" or simply "Input." Otherwise, it will show only the inputs associated with your addresses.
+- If none of your addresses are present in a transaction's inputs, the output field will display only the outputs related to your addresses. However, if your addresses are included in the inputs, all outputs will be shown.
 
 There are generally two ways to execute this program.
 
