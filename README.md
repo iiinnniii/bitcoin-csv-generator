@@ -53,7 +53,7 @@ afbe2585d2ce72664dfe3c4e55df82d2a9e87f7c0307b53da8c44cda7a546103
 
 If none of your addresses are included in the inputs of a transaction, the input field for that transaction will be set to "Multiple Inputs" or "Input". Otherwise, the inputs associated with your addresses will be displayed.
 
-The output column will only display outputs associated with your addresses.
+If none of your addresses are included in the inputs of a transaction, the output field for that transaction will only display outputs associated with your addresses. Otherwise, all outputs will be displayed.
 
 There are generally two ways to execute this program.
 
