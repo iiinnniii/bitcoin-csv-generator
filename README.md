@@ -33,6 +33,8 @@ bc1qdkwrhlgegt74rl2pgy5qsdxtdf7xe9fpxrm6kq
 bc1qfljxuh8cxmgqujv8cprtffnq89kd3k2etkq8nt
 ```
 
+**Important:** Don’t forget to add your change addresses as well.
+
 To get the transaction hashes from your Electrum wallet, follow these steps:
 
 ```
@@ -50,6 +52,8 @@ Next, replace the contents of `data/transaction-ids.txt` with your transaction h
 afbe2585d2ce72664dfe3c4e55df82d2a9e87f7c0307b53da8c44cda7a546103
 1a005995d29d7be81fd18dbc9fb9f9599b8c509033b72d573b0c036e52d77cfd
 ```
+
+**Important:** It is essential to place the transaction hashes of the oldest transactions first and the newest last. For example, afbe2585d2ce72664dfe3c4e55df82d2a9e87f7c0307b53da8c44cda7a546103 is the oldest transaction, while 1a005995d29d7be81fd18dbc9fb9f9599b8c509033b72d573b0c036e52d77cfd is the newest.
 
 Only relevant data will be displayed in the input and output columns, similar to how Electrum does it by default. Below is a detailed explanation of the mechanics:
 
